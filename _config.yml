@@ -13,22 +13,24 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: Fagskolens Designlab
+email: eplehans@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+instagram: designlabben
 
 # Build settings
-markdown: kramdown
+
 theme: minima
 plugins:
   - jekyll-feed
+
+permalink: pretty
+markdown: kramdown
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -41,3 +43,59 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Prose specifics
+prose:
+  rooturl: '_posts'
+  siteurl: 'https://fagskolenkristiania.github.io/designlab/'
+  relativeLinks: 'https://fagskolenkristiania.github.io/designlab/links.jsonp'
+  media: 'media'
+  metadata:
+    _posts:
+      - name: "category"
+        field:
+          element: "hidden"
+          value: "blog"
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "blog"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "splash"
+        field:
+          element: "text"
+          label: "Splash image"
+          value: ""
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          options:
+            - name: "Apples"
+              value: "apples"
+            - name: "Bananas"
+              value: "bananas"
+            - name: "Pears"
+              value: "pears"
+            - name: "Mangos"
+              value: "mangos"
+    _posts/static:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "page"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "permalink"
+        field:
+          element: "text"
+          label: "Permalink"
+          value: ""
