@@ -1,0 +1,31 @@
+
+@charset "utf-8";
+
+// Vendor -------------- //
+@import 'lib/reset';
+@import 'lib/helpers'; 
+
+// Core -------------- //
+@import 'core/vars';
+@import 'core/utils'; 
+
+
+// The rest -------------- //
+@import 'core/vars';
+
+
+[data-touch="false"] .mobileOnly { 
+    display: none;
+}
+
+@media (max-width: 600px){
+    [data-touch="false"] .mobileOnly {
+        border: 2px solid black;
+    }
+}
+
+body{
+    font-size: 100%;
+    line-height: 1.5;
+    font-size: 1.3rem;
+}
