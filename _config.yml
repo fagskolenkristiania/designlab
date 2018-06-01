@@ -16,7 +16,7 @@ plugins:
   - jekyll-feed
   
 
-permalink: pretty
+# permalink: pretty
 markdown: kramdown
 
 # Sass settings
