@@ -1,0 +1,36 @@
+.booking-strip{
+    width: 100%;
+    overflow: hidden;
+    background: black;
+    text-transform: uppercase;
+
+    &__link{
+        padding: .5rem 0;
+        color: yellow;
+        display: block;
+        overflow: hidden;
+        width: auto;
+        position: absolute;
+        animation-name: bookingStrip;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+    }
+
+    &__text{
+        
+    }
+
+    &__repeater{
+       
+    }
+
+}
+@keyframes bookingStrip {
+    from{transform: translate(0, 0);}
+    to{transform: translate(-100%, 0);}
+}

@@ -32,6 +32,9 @@ function init() {
 
     document.body.setAttribute("data-touch", isTouchDevice());
 
+     //Booking strip
+     bookingStrip('booking-strip');
+
 }
 
 /**

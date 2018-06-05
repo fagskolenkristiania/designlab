@@ -7,6 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 instagram_user: designlabben
 facebook_user: designlabben
+slack_channel: fagskolenkristiania.slack.com
 seo_keywords: makerspace designlab kreativ fagskole 3dprinter vr
 
 # Build settings
