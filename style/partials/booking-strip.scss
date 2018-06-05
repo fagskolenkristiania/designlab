@@ -6,23 +6,35 @@
 
     &__link{
         padding: .5rem 0;
-        color: yellow;
-        display: block;
+        width: 20000px;
+
+        color: orange;
         overflow: hidden;
-        width: auto;
         position: absolute;
         animation-name: bookingStrip;
-        animation-duration: 2s;
+
+        animation-duration: 100s;
         animation-timing-function: linear;
         animation-delay: 0s;
         animation-iteration-count: infinite;
-        animation-direction: reverse;
+        animation-direction: normal;
         animation-fill-mode: forwards;
-        animation-play-state: running;
-    }
+        animation-play-state: paused;
 
+        .booking-strip--initialised & {
+            animation-play-state: running;
+        }
+    }
+    
+    //Hide text element. It's just for initialising and duplicating 
     &__text{
-        
+        position: absolute;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
     }
 
     &__repeater{
@@ -30,7 +42,10 @@
     }
 
 }
+
+
+
 @keyframes bookingStrip {
     from{transform: translate(0, 0);}
-    to{transform: translate(-100%, 0);}
+    to{transform: translate(-200%, 0);}
 }
