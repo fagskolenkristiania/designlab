@@ -5,18 +5,15 @@
     }
   }
   
-  //Uses .no-touch and .touch 
-  //classes on <body> element
-  //based on js touch device test
   @mixin hover($nested){
     @if $nested {
-      .no-touch &{
+      body[data-touch="false"] &{
         &:hover {
           @content;
         }
       }
     } @else{
-      .no-touch {
+      body[data-touch="false"] {
         &:hover {
           @content;
         }

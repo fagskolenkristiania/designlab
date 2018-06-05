@@ -1,0 +1,69 @@
+.horiswiper{
+    width: 100%;
+    overflow: hidden;
+    text-transform: uppercase;
+    position: relative;
+    background: red;
+
+    &__link{
+        background: orange;
+        overflow: hidden;
+        position: relative;
+        display: block;
+        
+        animation-name: horiswiper;
+
+        animation-duration: 100s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+        
+        .horiswiper--initialised & {
+            animation-play-state: running;
+        }
+
+        @include hover(true){
+            animation-play-state: paused;
+        }
+    }
+    
+    //Hide text element. It's just for initialising and duplicating 
+    &__text{
+        padding: 0;
+        display: inline;
+        border: 0;
+        position: relative;
+    }
+
+    &__repeater{
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+
+       .horiswiper--initialised & {
+           opacity: 1;
+       }
+
+       span{
+           margin: 0 1rem 0 0;
+       }
+
+       span:after{
+            content: "\2022";
+            margin-left: 1rem;
+            display: inline-block;
+        }
+    }
+}
+
+
+
+@keyframes horiswiper {
+    from{transform: translate(0, 0);}
+    to{transform: translate(-200%, 0);}
+}

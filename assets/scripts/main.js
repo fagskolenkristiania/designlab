@@ -1,11 +1,8 @@
-
-
 /**
  * Date specifics
  */
 let date = new Date(),
     day = date.getDay();
-
 
 let isTouchDevice = function () {
     return (
@@ -32,8 +29,8 @@ function init() {
 
     document.body.setAttribute("data-touch", isTouchDevice());
 
-     //Booking strip
-     bookingStrip('booking-strip');
+    //Booking strip
+    horiswiper('horiswiper', 50);
 
 }
 
