@@ -42,7 +42,6 @@ sass:
 prose:
   rooturl: '_posts'
   siteurl: 'https://fagskolenkristiania.github.io/designlab/'
-  relativeLinks: 'https://fagskolenkristiania.github.io/designlab/links.jsonp'
   media: 'media'
   metadata:
     _posts:
@@ -93,3 +92,40 @@ prose:
           element: "text"
           label: "Permalink"
           value: ""
+    _posts/gear:
+      - name: "category"
+        field:
+          element: "hidden"
+          value: "gearItem"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Gear item name"
+          placeholder: ""
+          alterable: true
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          options:
+            - name: "Verksted"
+              value: "verksted"
+            - name: "VR (Virtual Reality)"
+              value: "vr"
+            - name: "3D"
+              value: "3d"
+            - name: "Print"
+              value: "print"
+      - name: "image"
+        field:
+          element: "text"
+          label: "Gear item image"
+          placeholder: "Image path (relative to /media/post-images/gear/)"
+          alterable: true
+      - name: "bookable"
+        field:
+          element: "checkbox"
+          label: "Bookable"
+          help: "Adds a booking option to gear item"
+          value: false

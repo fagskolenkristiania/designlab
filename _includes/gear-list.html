@@ -1,0 +1,10 @@
+<ul class="gear-list">
+    {% for post in site.posts.gear %}
+        <li>
+        <h2>
+            <a class="gear-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+        <p>Category: </p>{{ post.category | escape }}</li>
+        </li>
+    {% endfor %}
+</ul>
