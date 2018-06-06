@@ -2,7 +2,7 @@ function mediumPosts(containerId){
     console.log(containerId)
 
     let mediumPosts = {};
-
+    
     const mediumPostsEl = document.getElementById(containerId);
     const mediumPostsTitleEl = document.getElementById('medium-posts-title');
     const mediumPostListContainerEl = document.getElementById('medium-post-list-container');

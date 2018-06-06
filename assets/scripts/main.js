@@ -29,13 +29,17 @@ function init() {
 
     document.body.setAttribute("data-touch", isTouchDevice());
 
-    horiswiper('horiswiper', 30);
+    //Horizontal swipers
+    if(document.getElementsByClassName('horiswiper').length > 0){
+        horiswiper('horiswiper', 30);
+    }
 
     //Medium posts
     if(document.getElementById('medium-posts')){
         console.log('kjører..')
         mediumPosts('medium-posts');
     }
+    
 }
 
 /**
