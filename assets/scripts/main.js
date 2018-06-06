@@ -29,9 +29,13 @@ function init() {
 
     document.body.setAttribute("data-touch", isTouchDevice());
 
-    //Booking strip
-    horiswiper('horiswiper', 50);
+    horiswiper('horiswiper', 30);
 
+    //Medium posts
+    if(document.getElementById('medium-posts')){
+        console.log('kjører..')
+        mediumPosts('medium-posts');
+    }
 }
 
 /**

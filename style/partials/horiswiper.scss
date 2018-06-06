@@ -10,12 +10,13 @@
         overflow: hidden;
         position: relative;
         display: block;
+        transform: translate(-100%,0);
+        text-decoration: none;
         
+        //Gets animation duration from JS
         animation-name: horiswiper;
-
-        animation-duration: 100s;
         animation-timing-function: linear;
-        animation-delay: 0s;
+        animation-delay: .3s;
         animation-iteration-count: infinite;
         animation-direction: normal;
         animation-fill-mode: forwards;
@@ -26,16 +27,34 @@
         }
 
         @include hover(true){
-            animation-play-state: paused;
+            animation-play-state: paused;            
         }
+    
     }
     
     //Hide text element. It's just for initialising and duplicating 
     &__text{
-        padding: 0;
+        color: transparent;
+        z-index: -1;
+        //background: black;
+    }
+
+    &__text, 
+    &__repeater span{
+        padding: 0 1rem;
         display: inline;
         border: 0;
         position: relative;
+        margin-right: -1px;
+        margin-left: -1px;
+
+        &:after{
+            content: "\2022";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(50%, -50%);
+        }
     }
 
     &__repeater{
@@ -45,25 +64,17 @@
         top: 0;
         display: block;
 
+        @include hover(true){
+            text-decoration: underline;
+        }
+
        .horiswiper--initialised & {
            opacity: 1;
        }
-
-       span{
-           margin: 0 1rem 0 0;
-       }
-
-       span:after{
-            content: "\2022";
-            margin-left: 1rem;
-            display: inline-block;
-        }
     }
 }
 
-
-
 @keyframes horiswiper {
     from{transform: translate(0, 0);}
-    to{transform: translate(-200%, 0);}
+    to{transform: translate(-100%, 0);}
 }
